@@ -1,0 +1,141 @@
+/* BORDER RADIUS E BOX SIZING
+
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: #b9c941;
+	padding: 50px;
+	margin: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 10px 50px 80px 100px;
+	-moz-border-radius: 10px 50px 80px 100px;
+	border-radius: 10px 50px 80px 100px;
+}
+*/
+
+/* Degrade e Transparencia
+
+#caixa{
+	width: 300px;
+	height: 300px;
+	 background: url(../Imagens/camera.png);
+	 background: linear-gradient( 90deg,red, green);
+	 background: radial-gradient(red, green, yellow);
+}
+
+#caixa h1{
+	background: rgba(255, 255, 255,0.8)
+}
+*/
+
+/* Sombra
+
+#caixa{
+	width: 300px;
+	height: 300px;
+	padding: 8px;
+	margin: 0 auto;
+	background: #009670;
+	box-shadow: 10px 15px 8px #111;
+}
+
+#caixa h1{
+	color: white;
+	text-shadow: 10px 15px 6px #111;
+}
+ */
+
+/* Animações
+@keyframes animacao-caixa{
+	from{
+		background: red;
+		border-radius: 0px;
+		top: 0;
+		left: 0;
+	}
+	to{
+		background: yellow;
+		border-radius: 300px;
+		top: 200px;
+		left: 200px;
+	}
+}
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: red;
+	position: relative;
+	animation-name: animacao-caixa;
+	animation-duration: 5s;
+	animation-delay: 2s;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+	animation: animacao-caixa 5s 2s 3 alternate; ( FORMA SIMPLIFICADA)
+}
+*/
+
+/* Transições 
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+#caixa:hover{
+	width: 400px;
+	background: yellow;
+	-webkit-transition: width 3s, background 3s ;
+	-moz-transition: width 3s, background 3s ;
+	-o-transition: width 3s, background 3s ;
+	transition: width 3s, background 3s;
+}
+*/
+
+/* FlexBox */
+#conteudo{
+	background: #dcdcdc;
+	height: 600px;
+	display: flex;
+	 /*flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch ; */
+}
+
+.item{
+	background: white;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+	border: 1px solid gray;
+	flex-grow: 0;
+}
+
+.ordem1{
+	order: 1;
+}
+
+.ordem2{
+	order: 2;
+}
+
+.ordem3{
+	order: 3;
+}
+
+.ordem4{
+	order: 4;
+}
+
+.item1{
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.item2{
+	flex-grow: 2;
+	flex-shrink: 5;
+}
+
