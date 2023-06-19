@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçoes Datas</title>
+    <script>
+
+      /* var data = new Date()
+      document.write(data.getDate())
+      document.write('/')
+      document.write(data.getMonth() + 1)
+      document.write('/')
+      document.write(data.getFullYear()) */
+
+    //Adicionar / remover dias
+    /*
+      var data = new Date()
+      document.write(data.toString())
+      document.write('<hr>')
+      data.setDate(data.getDate() + 1)
+      document.write(data.toString())
+      document.write('<hr>')
+
+      //Adicionar / remover meses
+      var data = new Date()
+      document.write(data.toString())
+      document.write('<hr>')
+      data.setMonth(data.getMonth() - 1)
+      document.write(data.toString())
+      document.write('<hr>')
+
+       //Adicionar / remover anos
+       var data = new Date()
+      document.write(data.toString())
+      document.write('<hr>')
+      data.setFullYear(data.getFullYear() + 2)
+      document.write(data.toString())
+      */
+     
+
+      //calcular quantos dias tem entre essas datas: 15/01/2017 e 23/02/2017
+      
+      var data1 = new Date( 2017 , 0 , 15 )
+
+      var data2 = new Date( 2017 , 1 , 23 )
+
+      document.write(data1.toString())
+      document.write('<hr>')
+      document.write(data2.toString())
+      document.write('<hr>')
+      // converter as datas em algo que possamos calcular
+      document.write(data1.getTime())
+      document.write('<hr>')
+      document.write(data2.getTime())
+      document.write('<hr>')
+
+      // encontrar a quantidade de milisegundos que tem entre uma data e outra
+        var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milisegundos_entre_datas)
+
+        document.write('<hr>')
+      //Sabemos que 1 dia tem 24 horas, cada hora tem 60 min, cada min tem 60 segundos, cada segundo tem 1000 milisegundos
+        var milisegundos_por_dia = (1*24*60*60*1000)
+        document.write(' 1 dia tem: '+ milisegundos_por_dia + ' milisegundos')
+        document.write('<hr>')
+
+        document.write('A Diferença entre Data1 e Data2 é de '+ milisegundos_entre_datas / milisegundos_por_dia + ' dias.')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
