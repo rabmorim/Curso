@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos-Mouse</title>
+    <script>
+        function acao(){
+            alert('Função Disparada')
+        }
+        function acao2(){
+            alert('Função de Dois cliques Disparada')
+        }
+        function acao3(){
+            alert('Função de Sobreposição do Elemento Disparada')
+        }
+    </script>
+</head>
+<body>
+    <div onclick="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>
+    <div ondblclick="acao2()" style="background: #000; height: 150px; width: 150px;"></div>
+    <div onmouseover="acao3()" style="background: #777; height: 150px; width: 150px;"></div>
+</body>
+</html>
