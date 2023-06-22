@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Estilos no DOM</title>
+    <script>
+        function modificaEstilo(cor){
+            document.getElementById('fundo').style.background = cor
+        }
+    </script>
+</head>
+<body>
+    <h3>Manipulando Estilos</h3>
+    <button onclick="modificaEstilo('#FF0000')" type="button">Vermelho</button>
+    <button onclick="modificaEstilo('#00FF00')" type="button">Verde</button>
+    <button onclick="modificaEstilo('blue')" type="button">Azul</button>
+
+    <hr>
+    <div style="border: 1px solid #000; width: 100px; height: 100px;" id="fundo">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Manipulando no DOM</title>
+    <style>
+        .estilo1{
+            width: 500px;
+            height: 20px;
+            background-color: #fff;
+        }
+        .estilo2{
+            width: 500px;
+            height: 20px;
+            background-color: yellow;
+        }
+        .estilo3{
+            width: 500px;
+            height: 20px;
+            background-color: red;
+        }
+        .estilo4{
+            width: 500px;
+            height: 20px;
+            background-color: green;
+        }
+    </style>
+    <script>
+        /*
+        Crie um campo <input type="text"> e aplique os seguintes controles com base nos
+        eventos abaixo:
+        • No evento de foco modifique o background do input para amarelo.
+        • Quando o campo perder o foco, recupere o seu respectivo valor e:
+        o Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo
+        deve ter seu background alterado para vermelho.
+        o Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
+        deve ser alterado para verde.
+         */
+        function foco(){
+            document.getElementById('input').className = 'estilo2'
+        }
+        function semFoco(){
+          var caracter = document.getElementById('input').value
+          
+          caracter = caracter.length
+
+          if(caracter <= 3){
+            document.getElementById('input').className = 'estilo3'
+          }
+          else{
+            document.getElementById('input').className = 'estilo4'
+          }
+        }
+    </script>
+</head>
+<body>
+    <input
+     onfocus="foco()" 
+     type="text"
+     placeholder="Digite Aqui"
+     class="estilo1"
+     id="input"
+     onblur="semFoco()">
+</body>
+</html>
