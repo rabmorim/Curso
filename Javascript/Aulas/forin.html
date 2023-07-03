@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in</title>
+    <script>
+        /* For in sera usado para listar indices nao sequenciais ou até mesmo aleatórios */
+        var listaConvidados = ['Jorge', 'Ana', 'Rodrigo', 'Claudia', 'Marcela']
+        console.log(listaConvidados)
+        for( var x in listaConvidados){
+            console.log('Indice '+ x +' Valor ' + listaConvidados[x])
+        }
+
+        var listaConvidados2 = []
+        listaConvidados2['a'] ='Jorge' 
+        listaConvidados2[10] ='ana' 
+        listaConvidados2['zebra'] ='Rodrigo' 
+        listaConvidados2[true] ='marcela' 
+        for( var y in listaConvidados2){
+            console.log('Indice '+ y +' Valor ' + listaConvidados2[y])
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
