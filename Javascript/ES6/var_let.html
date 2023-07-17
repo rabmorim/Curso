@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var e Let</title>
+    <script>
+        //3 escopos : global, função e bloco.
+        var serie = 'Two and Half Man'
+        function x (){
+            var serie = 'The Walking Dead'
+            console.log('Função: '+serie)
+            if(true){
+                console.log( 'Bloco dentro da função: '+ serie)
+                let serie1 = 'Breaking Bead'
+                 console.log('Bloco dentro da função, usando let : '+serie1)
+            }
+        }
+
+        x()
+
+        if(true){
+                console.log('Global: '+ serie)
+            }
+        console.log('Bloco Global, usando let : '+serie1) // esperado um erro, pois o let preserva seu escopo
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
