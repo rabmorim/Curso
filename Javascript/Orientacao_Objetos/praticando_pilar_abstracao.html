@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando o Pilar da Abstração</title>
+    <script>
+        // um software de marcenaria
+        // cadeira e sofa
+        // paradigma de Orientação a Objetos
+        class Cadeira {
+            constructor(qtde_pernas, giratoria, cor){
+                this.qtde_pernas = qtde_pernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+
+            girarCadeira(){
+                if(this.giratoria === true){
+                    console.log('A Cadeira é giratoria')
+                } else {
+                    console.log('A Cadeira não é giratória')
+                }
+            }
+        }
+
+        let cadeira = new Cadeira( 4 , false , 'azul')
+        let cadeira2 = new Cadeira( 1 , true , 'verde')
+
+        cadeira.girarCadeira()
+        cadeira2.girarCadeira()
+
+
+        // desafio do sofa
+        // paradigma de orientação a objetos
+
+        class Sofa {
+            constructor(qtde_lugares , reclinavel, corSofa){
+                this.qtde_lugares = qtde_lugares
+                this.reclinavel = reclinavel
+                this.corSofa = corSofa
+            }
+
+            reclinar(){
+                if( this.reclinavel === true){
+                    console.log('Esse sofá é reclinavel')
+                } else {
+                    console.log('Esse sofa não é reclinavel')
+                }
+            }
+
+            sofaCama(){
+                if(this.qtde_lugares >= 3 && this.reclinavel === true){
+                    console.log('Esse sofá é um sofa cama')
+                } else{
+                    console.log('Esse sofá nao é um sofa cama')
+                }
+            }
+        }
+
+        let sofa = new Sofa( 4, true , 'verde')
+        let sofa2 = new Sofa( 2, false , 'marrom')
+        sofa.reclinar()
+        sofa.sofaCama()
+        sofa2.reclinar()
+        sofa2.sofaCama()
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
