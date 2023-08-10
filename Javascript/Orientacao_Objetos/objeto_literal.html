@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Literal</title>
+    <script>
+       class Produto{
+        constructor( descricao , valor){
+            this.descricao = descricao
+            this.valor = valor
+        }
+
+        verDescricao(){
+            console.log(`${this.descricao} por apenas ${this.valor}`)
+        }
+       }
+
+       let produto = new Produto('Notbook', 2500)
+       produto.verDescricao()
+
+       let produtoLiteral = {
+        descricao: 'Geladeira',
+        valor: 1800,
+        verDescricao: function(){
+            console.log(`${this.descricao} por apenas ${this.valor}`)
+        }
+       }
+
+       produtoLiteral.verDescricao()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
